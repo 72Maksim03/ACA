@@ -1,0 +1,52 @@
+// 1. Given a number. Print “odd” if the number is odd and “even” if it’s even.
+let number = 16
+if(number % 2 === 0){
+    console.log("even")
+}else{
+    console.log("odd")
+}
+
+// 2. Given two numbers print 1 if one of them is divisible by the other one, otherwise print 0.
+let number1 = 16
+let number2 = 32
+if (number1 % number2 === 0){
+    console.log("1")
+}else if (number2 % number1 === 0){
+    console.log("1")
+}else{
+    console.log("0")
+}
+
+// 3. Given a positive integer. Bring the last digit of the number to the beginning. Print the new number. If the last digit of the inserted number is 0, number remains the same.
+let number = 1697
+let lastDigit = number % 10
+if(lastDigit === 0){
+    console.log(number)
+}else{
+    number = number / 10
+    number = Math.floor(number)
+    let result = String(lastDigit) + String(number)
+    Number(result)
+    console.log(result)
+}
+
+// 4. Given five numbers as input. Calculate and print the average of the numbers(without using arrays).
+let number1 = 16
+let number2 = 27
+let number3 = 19
+let number4 = 94
+let number5 = 67
+let sum = number1 + number2 + number3 + number4 + number5
+let average = sum / 5
+console.log(average)
+
+// 5. Given the following code rewrite it using only two if operators. (Hint: use logical operators).
+let n = +prompt()
+let i = 0
+let j = 0
+if (n % 2 === 0 && !Math.floor(n/10)){
+    i += 1
+}
+if (n % 3 === 0 && n % 10 === 1){
+    j += 1
+}
