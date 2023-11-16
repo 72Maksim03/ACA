@@ -69,22 +69,36 @@ if (number1 < number2){
 
 // 4. Given a number as input, insert dashes (-) between each two even numbers.
 
-let number = 26879631422
+let number = 222
 let result = ""
-while(number > 0){
-    let a = number % 10
-    if (a % 2 ===0){
-        result = a + result
-        number = Math.floor(number / 10)
-        a = number % 10
-        while (a % 2 ===0){
-            result = a + "-" + result
-        }/*else{
-            result = a + result
-        }*/
-    }else{
-        result = a + result
-        number = Math.floor(number / 10)
-    }
+while(number > 10){
+  let a1 = number % 10
+  let a2 = (number % 100 - a1) / 10
+  number = Math.floor(number / 10)
+  if (a1 % 2 === 0 && a2 % 2 ===0){
+    result = "-" + a1 + result
+  } else{
+    result = a1 + result
+  }
 }
+result = number + result
+console.log(result)
+
+// 5. Given a positive number. Print it in reverse order
+
+let number = 1253
+let i = 1
+let result = 0
+let n1 = number
+while(Math.floor(n1 / 10) > 0){
+  i = i * 10;
+  n1 = n1 / 10
+}
+while(Math.floor(number / 10) > 0){
+  let n = number % 10
+  result = i * n + result
+  number = Math.floor(number / 10)
+  i = i / 10
+}
+result = result + (number % 10)
 console.log(result)
