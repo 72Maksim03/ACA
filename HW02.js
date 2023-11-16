@@ -43,4 +43,29 @@ if(number % 10 === 9){
     }
 console.log(i)
 
-// 3. Given two numbers as input, 
+// 3. Given two numbers. Print only odd numbers between that numbers.
+
+let number1 = 10
+let number2 = 60
+if (number1 < number2){
+    while(number1 < number2){
+        if (number1 % 2 === 0){
+            number1 = number1 + 1
+        }else{
+            console.log(number1)
+            number1 = number1 +1
+        }
+    }
+}else{
+    while(number1 > number2){
+        if (number2 % 2 === 0){
+            number2 = number2 + 1
+        }else{
+            console.log(number2)
+            number2 = number2 +1
+        }
+    }
+}
+
+// 4. Given a number as input, insert dashes (-) between each two even numbers.
+
