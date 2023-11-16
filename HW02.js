@@ -69,3 +69,22 @@ if (number1 < number2){
 
 // 4. Given a number as input, insert dashes (-) between each two even numbers.
 
+let number = 26879631422
+let result = ""
+while(number > 0){
+    let a = number % 10
+    if (a % 2 ===0){
+        result = a + result
+        number = Math.floor(number / 10)
+        a = number % 10
+        while (a % 2 ===0){
+            result = a + "-" + result
+        }/*else{
+            result = a + result
+        }*/
+    }else{
+        result = a + result
+        number = Math.floor(number / 10)
+    }
+}
+console.log(result)
