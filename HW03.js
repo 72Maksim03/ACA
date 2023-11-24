@@ -51,3 +51,34 @@ prime(23)
 
 // 4. Insert a n positive number. Print the n-st prime number.
 
+function isPrime(number){
+  for(let i = 2; i < number; i++){
+    if(number % i === 0){
+      return false
+    }
+  }
+  return true
+}
+function nthPrime(n){
+  let number = 1
+  let count = 0
+  while(count < n){
+    number++
+    if(isPrime(number)){
+      count++
+    }
+  }
+  console.log(number)
+}
+nthPrime(10)
+
+// 5. Insert two positive integers n and m between 1 and 10. Compute and print n m .
+
+function pow(n,m){
+  let result = 1
+  for(m; m > 0; m--){
+    result = result * n
+  }
+  console.log(result)
+}
+pow(4, 6)
